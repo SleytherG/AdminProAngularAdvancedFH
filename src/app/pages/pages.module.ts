@@ -8,7 +8,7 @@ import {SharedModule} from '../shared/shared.module';
 import {PagesRoutingModule} from './pages-routing.module';
 import {FormsModule} from "@angular/forms";
 import {ComponentsModule} from "../components/components.module";
-import {ChartsModule} from "ng2-charts";
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +16,14 @@ import {ChartsModule} from "ng2-charts";
     Grafica1Component,
     ProgressComponent,
     PagesComponent,
+    AccountSettingsComponent,
   ],
   exports: [
     DashboardComponent,
     Grafica1Component,
     ProgressComponent,
     PagesComponent,
-    FormsModule
+    AccountSettingsComponent
   ],
   imports: [
     CommonModule,
