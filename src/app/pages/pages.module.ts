@@ -9,6 +9,8 @@ import {PagesRoutingModule} from './pages-routing.module';
 import {FormsModule} from "@angular/forms";
 import {ComponentsModule} from "../components/components.module";
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
+import { PromesasComponent } from './promesas/promesas.component';
 
 @NgModule({
   declarations: [
@@ -16,14 +18,18 @@ import { AccountSettingsComponent } from './account-settings/account-settings.co
     Grafica1Component,
     ProgressComponent,
     PagesComponent,
+    PromesasComponent,
     AccountSettingsComponent,
+    RxjsComponent,
   ],
   exports: [
     DashboardComponent,
     Grafica1Component,
     ProgressComponent,
     PagesComponent,
-    AccountSettingsComponent
+    PromesasComponent,
+    AccountSettingsComponent,
+    RxjsComponent
   ],
   imports: [
     CommonModule,

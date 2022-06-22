@@ -17,9 +17,9 @@
             </span></a
           >
           <ul aria-expanded="false" class="collapse">
-            <li><a href="javascript:void()">My Profile </a></li>
-            <li><a href="javascript:void()">My Balance</a></li>
-            <li><a href="javascript:void()">Inbox</a></li>
+            <li><a href="javascript:void(0)">My Profile </a></li>
+            <li><a href="javascript:void(0)">My Balance</a></li>
+            <li><a href="javascript:void(0)">Inbox</a></li>
             <li><a [routerLink]="['/account-settings']">Account Setting</a></li>
             <li><a [routerLink]="['/auth/login']">Logout</a></li>
           </ul>
@@ -43,7 +43,13 @@
           >
           <ul aria-expanded="false" class="collapse" *ngFor="let subItem of item['submenu']">
             <li>
-              <a [routerLink]="[subItem.url]">{{ subItem.title }} </a>
+            <a
+              [routerLink]="[subItem.url]"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true}"
+              >
+              {{ subItem.title }}
+            </a>
             </li>
           </ul>
         </li>
